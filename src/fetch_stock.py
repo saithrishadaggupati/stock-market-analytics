@@ -1,12 +1,35 @@
-# Fetch real stock market data
+# ============================================
+# FETCH REAL STOCK MARKET DATA
+# ============================================
 
 import yfinance as yf
 import pandas as pd
 
+# ============================================
+# STOCK LIST
+# ============================================
 
-# Stocks we will track
-STOCKS = ["RELIANCE.NS", "TCS.NS", "INFY.NS", "AAPL", "GOOGL"]
+STOCKS = [
+    "RELIANCE.NS",
+    "TCS.NS",
+    "INFY.NS",
+    "HDFCBANK.NS",
+    "ICICIBANK.NS",
+    "SBIN.NS",
+    "LT.NS",
+    "ITC.NS",
+    "AAPL",
+    "MSFT",
+    "NVDA",
+    "AMZN",
+    "GOOGL",
+    "META",
+    "TSLA"
+]
 
+# ============================================
+# FETCH FUNCTION
+# ============================================
 
 def fetch_stock_data():
 
@@ -20,55 +43,83 @@ def fetch_stock_data():
 
         print(f"Fetching data for {stock}...")
 
-        # Download stock data
-        df = yf.download(
-            stock,
-            period="90d",
-            auto_adjust=False
-        )
+        try:
 
-        # Fix multi-level columns
-        if isinstance(df.columns, pd.MultiIndex):
-            df.columns = df.columns.get_level_values(0)
+            # Download stock data
+            df = yf.download(
+                stock,
+                period="90d",
+                auto_adjust=False
+            )
 
-        # Convert index into normal column
-        df.reset_index(inplace=True)
+            # Skip empty datasets
+            if df.empty:
+                print(f"No data found for {stock}")
+                continue
 
-        # Print columns for debugging
-        print(df.columns)
+            # Fix multi-level columns
+            if isinstance(df.columns, pd.MultiIndex):
+                df.columns = df.columns.get_level_values(0)
 
-        # Rename first column to Date
-        df.rename(columns={df.columns[0]: "Date"}, inplace=True)
+            # Convert index into normal column
+            df.reset_index(inplace=True)
 
-        # Keep only required columns
-        df = df[
-            [
-                "Date",
-                "Open",
-                "High",
-                "Low",
-                "Close",
-                "Volume"
+            # Rename first column to Date
+            df.rename(
+                columns={df.columns[0]: "Date"},
+                inplace=True
+            )
+
+            # Keep required columns only
+            df = df[
+                [
+                    "Date",
+                    "Open",
+                    "High",
+                    "Low",
+                    "Close",
+                    "Volume"
+                ]
             ]
-        ]
 
-        # Add stock name
-        df["Stock"] = stock
+            # Add stock name
+            df["Stock"] = stock
 
-        # Add to list
-        all_data.append(df)
+            # Add dataframe to list
+            all_data.append(df)
 
-    # Combine all stock data
-    combined = pd.concat(all_data, ignore_index=True)
+            print(f"{stock} data downloaded successfully!\n")
 
-    # Save dataset
-    combined.to_csv("data/stocks.csv", index=False)
+        except Exception as e:
+
+            print(f"Error downloading {stock}: {e}")
+
+    # ============================================
+    # COMBINE ALL STOCKS
+    # ============================================
+
+    combined = pd.concat(
+        all_data,
+        ignore_index=True
+    )
+
+    # ============================================
+    # SAVE DATASET
+    # ============================================
+
+    combined.to_csv(
+        "data/stocks.csv",
+        index=False
+    )
 
     print("\n===================================")
-    print("Stock data downloaded successfully!")
-    print("File saved to: data/stocks.csv")
+    print("All stock data downloaded successfully!")
+    print("Dataset saved to: data/stocks.csv")
     print("===================================")
 
 
-# Run function
+# ============================================
+# RUN FUNCTION
+# ============================================
+
 fetch_stock_data()
