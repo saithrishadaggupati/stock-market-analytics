@@ -3,6 +3,7 @@
 I wanted a project that combined SQL, Python, and a live 
 dashboard — so I built this to track Indian and US stock 
 performance in one place.
+<img width="1731" height="752" alt="image" src="https://github.com/user-attachments/assets/9898ad01-10fc-4347-99fb-8fdb62c0588a" />
 
 You pick a stock, and it shows you the price history, 
 7-day and 30-day moving averages, trading volume, and 
