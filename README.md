@@ -1,66 +1,45 @@
-# 📈 Stock Market Analytics Dashboard
+# Stock Market Analytics Dashboard
 
-An interactive stock market dashboard built using Python, Streamlit, Pandas, Plotly, and SQL to analyze real-time stock trends and market performance.
+I wanted a project that combined SQL, Python, and a live 
+dashboard — so I built this to track Indian and US stock 
+performance in one place.
 
----
+You pick a stock, and it shows you the price history, 
+7-day and 30-day moving averages, trading volume, and 
+a few KPI cards that give you a quick read on recent 
+performance.
 
-## 🚀 Features
+## Live App
+👉 [Open Dashboard](https://stock-market-analytics-ftic57gndb94woiigwukue.streamlit.app/)
 
-- Real-time stock market data analysis
-- Interactive dashboard with Streamlit
-- KPI metrics for stock performance
-- Moving average trend analysis
-- Trading volume visualization
-- Dynamic charts using Plotly
-- Data cleaning and preprocessing using Pandas
-- SQL-based stock analysis
+## How it works
 
----
+**1. Data Collection**
+Uses yFinance to pull historical price data for 
+Indian and US stocks.
 
-## 🛠 Tech Stack
+**2. Processing**
+Cleans and structures the data with Pandas, then 
+loads it into a local SQLite database for 
+SQL-based analysis.
 
-- Python
-- Pandas
-- Plotly
-- Streamlit
-- SQL
-- yFinance
+**3. Dashboard**
+Built with Streamlit and Plotly — pick a stock, 
+adjust the date range, and the charts update 
+instantly.
 
----
+## Tech used
+Python · Pandas · SQL (SQLite) · Plotly · Streamlit · yFinance
 
-## 📊 Dashboard Highlights
+## Run it yourself
+git clone https://github.com/saithrishadaggupati/stock-market-analytics
+pip install -r requirements.txt
+streamlit run dashboard/app.py
 
-- Stock Closing Price Trends
-- 7-Day Moving Average
-- 30-Day Moving Average
-- Trading Volume Analysis
-- Interactive Stock Selection
-- KPI Cards and Insights
-
----
-
-## 📂 Project Structure
-
-```bash
+## Project structure
 stock-market-analytics/
-│
-├── dashboard/
-│   └── app.py
-│
-├── data/
-│   ├── stocks.csv
-│   ├── stocks_clean.csv
-│   └── sql_analysis.csv
-│
-├── src/
-│   ├── fetch_stock.py
-│   ├── clean_stock.py
-│   ├── visualize.py
-│   ├── dashboard.py
-│   ├── kpi_analysis.py
-│   ├── load_to_sql.py
-│   └── sql_analysis.py
-│
-├── requirements.txt
-├── README.md
-└
+├── dashboard/      # Streamlit app
+├── data/           # CSV and cleaned data files
+├── src/            # Fetch, clean, analyze, visualize
+├── stock_market.db # SQLite database
+└── requirements.txt
