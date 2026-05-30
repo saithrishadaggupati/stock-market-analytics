@@ -79,8 +79,7 @@ yFinance API → Python ETL → PostgreSQL (Star Schema) → Power BI
 
 ## Tech Stack
 
-Python · Pandas · yFinance · PostgreSQL · SQLAlchemy · Power BI · DAX
-
+Python · Pandas · yFinance · PostgreSQL · SQLAlchemy · Power BI · DAX Measures · Star Schema
 ---
 
 ## Run it
