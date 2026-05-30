@@ -1,6 +1,13 @@
 # Stock Market Analytics — BI Dashboard
 
 
+[
+
+![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen)
+
+](https://stock-market-analytics-ftic57gndb94woiigwukue.streamlit.app/)
+
+
 
 ![Power BI](https://img.shields.io/badge/PowerBI-F2C811?style=flat&logo=powerbi&logoColor=black)
 
