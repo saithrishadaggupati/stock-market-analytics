@@ -70,12 +70,12 @@ yFinance API → Python ETL → PostgreSQL (Star Schema) → Power BI
 
 ## Key Findings
 
-- NVDA grew 426% in 3 years — best performer overall
-- Indian Banking was more stable than US Tech but grew slower
-- US Semiconductors was the top performing sector
-- TSLA had the highest volatility across all 25 stocks
-
----
+- TSLA and AMD are the riskiest stocks — 57% and 55% annual volatility
+- AMZN and NVDA move almost identically — 0.94 correlation
+- If you hold META, you're essentially holding AMZN (0.91 correlation)
+- ICICI Bank is the most stable stock across all 25 — great for risk-averse portfolios
+- Indian banking stocks (std dev ~0.012) are 4x more stable than US tech
+- NVDA grew 426% but carries 47% annual volatility — high risk, high reward---
 
 ## Tech Stack
 
