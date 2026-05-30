@@ -29,6 +29,30 @@
 
 
 
+
+## Power BI Dashboard
+
+### Market Overview
+
+
+![Market Overview](powerbi_market_overview.png)
+
+
+
+### Stock Deep Dive
+
+
+![Stock Deep Dive](powerbi_stock_deepdive.png)
+
+
+
+### Sector Analysis
+
+
+![Sector Analysis](powerbi_sector_analysis.png)
+
+
+
 ---
 
 Wanted to understand how Indian and US markets really compare —
