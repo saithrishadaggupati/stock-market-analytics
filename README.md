@@ -1,5 +1,7 @@
 # Stock Market Analytics Dashboard
 
+## 🔗 Live Demo: [https://stock-market-analytics-ftic57gndb94woiigwukue.streamlit.app/]
+
 I wanted a project that combined SQL, Python, and a live 
 dashboard — so I built this to track Indian and US stock 
 performance in one place.
