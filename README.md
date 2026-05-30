@@ -1,48 +1,47 @@
 # Stock Market Analytics Dashboard
 
-## 🔗 Live Demo: [https://stock-market-analytics-ftic57gndb94woiigwukue.streamlit.app/]
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen)](https://stock-market-analytics-ftic57gndb94woiigwukue.streamlit.app/)
 
-I wanted a project that combined SQL, Python, and a live 
-dashboard — so I built this to track Indian and US stock 
-performance in one place.
-<img width="1731" height="752" alt="image" src="https://github.com/user-attachments/assets/9898ad01-10fc-4347-99fb-8fdb62c0588a" />
+![Dashboard Preview](dashboard_preview.png)
 
-You pick a stock, and it shows you the price history, 
-7-day and 30-day moving averages, trading volume, and 
-a few KPI cards that give you a quick read on recent 
-performance.
+---
 
-## Live App
-👉 [Open Dashboard](https://stock-market-analytics-ftic57gndb94woiigwukue.streamlit.app/)
+I built this to understand how Indian and US stocks behave over time —
+not just price charts, but volatility, sector trends, and risk vs return.
 
-## How it works
+3 years of data. 25 stocks. One dashboard.
 
-**1. Data Collection**
-Uses yFinance to pull historical price data for 
-Indian and US stocks.
+---
 
-**2. Processing**
-Cleans and structures the data with Pandas, then 
-loads it into a local SQLite database for 
-SQL-based analysis.
+## What I found
 
-**3. Dashboard**
-Built with Streamlit and Plotly — pick a stock, 
-adjust the date range, and the charts update 
-instantly.
+- NVDA grew 426% in 3 years. TSLA was the most volatile.
+- Indian banking stocks were more stable than US tech — but grew slower.
+- ITC.NS lost 33% while every other Indian stock gained.
+- US Semiconductors was the best performing sector overall.
 
-## Tech used
-Python · Pandas · SQL (SQLite) · Plotly · Streamlit · yFinance
+---
 
-## Run it yourself
+## Pages
+
+- Market Overview — who grew, who didn't
+- Stock Deep Dive — price, moving averages, volume
+- Sector Analysis — Indian vs US comparison
+- Volatility & Risk — which stocks are risky vs stable
+- Key Insights — findings pulled straight from the data
+
+---
+
+## Built with
+
+Python · Pandas · SQL · Plotly · Streamlit · yFinance
+
+---
+
+## Run it
+
 git clone https://github.com/saithrishadaggupati/stock-market-analytics
 pip install -r requirements.txt
+python src/fetch_stock.py
+python src/clean_stock.py
 streamlit run dashboard/app.py
-
-## Project structure
-stock-market-analytics/
-├── dashboard/      # Streamlit app
-├── data/           # CSV and cleaned data files
-├── src/            # Fetch, clean, analyze, visualize
-├── stock_market.db # SQLite database
-└── requirements.txt
