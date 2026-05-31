@@ -1,23 +1,18 @@
 # Stock Market Analytics — BI Dashboard
 
+[
 ![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen)
-(https://stock-market-analytics-ftic57gndb94woiigwukue.streamlit.app/)
-
-
+](https://stock-market-analytics-ftic57gndb94woiigwukue.streamlit.app/) 
 
 ![Power BI](https://img.shields.io/badge/PowerBI-F2C811?style=flat&logo=powerbi&logoColor=black)
 
-
-
+ 
 
 ![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=flat&logo=duckdb&logoColor=black)
 
-
-
+ 
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-
-
 
 
 
