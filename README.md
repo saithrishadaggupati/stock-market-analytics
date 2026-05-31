@@ -1,7 +1,7 @@
 # Stock Market Analytics — BI Dashboard
 
 ![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen)
-](https://stock-market-analytics-ftic57gndb94woiigwukue.streamlit.app/)
+(https://stock-market-analytics-ftic57gndb94woiigwukue.streamlit.app/)
 
 
 
