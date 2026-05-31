@@ -7,12 +7,13 @@
 ](https://stock-market-analytics-ftic57gndb94woiigwukue.streamlit.app/)
 
 
+
 ![Power BI](https://img.shields.io/badge/PowerBI-F2C811?style=flat&logo=powerbi&logoColor=black)
 
 
 
 
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white)
+![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=flat&logo=duckdb&logoColor=black)
 
 
 
@@ -56,19 +57,18 @@ Now I know. And so can you.
 
 ## How it works
 
-yFinance API → Python ETL → PostgreSQL (Star Schema) → Power BI
+yFinance API → Python ETL → DuckDB (Star Schema) → Power BI
 
 **Data Model:**
-- `fact_stock_prices` — 18,000+ rows of daily OHLCV data
-- `dim_stock` — company master (sector, country)
+- `fact_stock_prices` — 18,671 rows of daily OHLCV data
+- `dim_stock` — 25 stocks with sector and country classification
 - `dim_date` — time intelligence (day, month, quarter, year)
 
 **SQL KPI Views:**
 - Daily % price change
 - 7-day & 30-day moving averages
-- 52-week high/low
-- Top gainers & losers
-- Sector performance
+- Volume spike detection (window functions)
+- Sector performance comparison
 
 **DAX Measures:**
 - % Price Change
@@ -79,7 +79,7 @@ yFinance API → Python ETL → PostgreSQL (Star Schema) → Power BI
 - Annual volatility per stock
 - Cross-stock correlation matrix
 - Risk vs return comparison
-- Data quality validation
+- Data quality validation across all 25 stocks
 
 ---
 
@@ -110,7 +110,7 @@ yFinance API → Python ETL → PostgreSQL (Star Schema) → Power BI
 
 ## Built with
 
-Python · Pandas · yFinance · PostgreSQL · SQLAlchemy · Power BI · DAX · Star Schema · Streamlit · Plotly
+Python · Pandas · yFinance · DuckDB · Power BI · DAX · Star Schema · Streamlit · Plotly
 
 ---
 
@@ -120,7 +120,7 @@ Python · Pandas · yFinance · PostgreSQL · SQLAlchemy · Power BI · DAX · S
 git clone https://github.com/saithrishadaggupati/stock-market-analytics
 pip install -r requirements.txt
 python src/fetch_stock.py
-python src/star_schema.py
+python src/migrate_to_duckdb.py
 python src/kpi_queries.py
 python src/data_quality.py
 python src/statistics_analysis.py
