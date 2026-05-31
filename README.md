@@ -51,10 +51,17 @@ Now I know. And so can you.
 
 yFinance API → Python ETL → DuckDB (Star Schema) → Power BI
 
-**Data Model:**
-- `fact_stock_prices` — 18,671 rows of daily OHLCV data
-- `dim_stock` — 25 stocks with sector and country classification
-- `dim_date` — time intelligence (day, month, quarter, year)
+## Data Model
+
+I modelled the data into a star schema — the same pattern used in real BI teams.
+
+fact_stock_prices sits at the centre with 18,671 rows of daily OHLCV data.
+Two dimension tables hang off it:
+
+- dim_stock — ticker, sector, country for all 25 stocks
+- dim_date — day, month, quarter, year for time intelligence in DAX
+
+This structure is what makes the Power BI slicers and DAX measures work properly.
 
 **SQL KPI Views:**
 - Daily % price change
