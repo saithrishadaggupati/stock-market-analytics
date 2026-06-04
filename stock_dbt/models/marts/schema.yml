@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: mart_stock_performance
+    description: "Aggregated stock performance metrics including volatility and returns"
+    columns:
+      - name: ticker
+        description: "Stock ticker symbol"
+        tests:
+          - unique
+          - not_null
+      - name: annual_volatility
+        description: "Annualized volatility calculated as stddev of daily returns * sqrt(252)"
+      - name: avg_daily_return
+        description: "Average daily percentage return"
+
+  - name: mart_sector_summary
+    description: "Sector-level aggregated performance metrics"
+    columns:
+      - name: sector
+        description: "Stock market sector"
+        tests:
+          - not_null

@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_fact_stock_prices
+    description: "Staging model for daily stock price data with calculated metrics"
+    columns:
+      - name: fact_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: close
+        description: "Daily closing price"
+        tests:
+          - not_null
+      - name: daily_pct_change
+        description: "Daily percentage price change"
+
+  - name: stg_dim_stock
+    description: "Staging model for stock metadata with market classification"
+    columns:
+      - name: stock_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: ticker
+        description: "Stock ticker symbol"
+        tests:
+          - unique
+          - not_null
