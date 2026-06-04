@@ -1,0 +1,22 @@
+[33m73437af[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Removed hardcoding — dim_stock now built dynamically from data
+[33md708b9c[m Resume-ready final README
+[33ma28ec55[m Added Power BI dashboard screenshots
+[33m036a3a6[m Added Power BI dashboard screenshots
+[33m90d26db[m Added live Streamlit deployment
+[33mc0b1dd1[m Added data quality checks — all 25 stocks pass validation
+[33m20be6cb[m Added statistical analysis: volatility, correlation, stability
+[33m4525915[m Added DAX measures: Pct Price Change, Price Range, Volume Intensity
+[33md99ea0a[m Updated README with natural BI narrative
+[33m2e253c6[m Add statistics layer: volatility ranking, correlation matrix, outlier detection using Z-score
+[33mdd050c4[m Fix screenshot filename
+[33mf1acb34[m Fix README: clickable badge, dashboard screenshot, clean layout
+[33mc34e8e0[m Add live demo link to README
+[33mefb1f07[m Rebuild dashboard: 5 pages, sector analysis, volatility ranking, risk vs return scatter, auto insights across 25 stocks 3yr data
+[33m994afbf[m Upgrade SQL analysis: added window functions, subqueries, volume spike detection, moving averages across 25 stocks 3yr data
+[33m67e3086[m Update README.md
+[33m83c7847[m Update README.md
+[33mc879670[m Updated multi-stock dashboard
+[33m3623120[m Final stock market analytics dashboard
+[33ma0343b7[m Improved dashboard design
+[33me3b002c[m Add requirements
+[33md20a3df[m Stock market analytics dashboard
