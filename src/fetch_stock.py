@@ -1,6 +1,6 @@
 import yfinance as yf
 import pandas as pd
-from sqlalchemy import create_engine
+import os
 
 STOCKS = {
     "TCS.NS": "Indian IT", "INFY.NS": "Indian IT",
@@ -36,18 +36,14 @@ def fetch_stock_data():
             df["Stock"] = stock
             df["Sector"] = sector
             all_data.append(df)
-            print(f"{stock} done!\n")
+            print(f"{stock} done!")
         except Exception as e:
             print(f"Error: {stock}: {e}")
 
     combined = pd.concat(all_data, ignore_index=True)
+    os.makedirs("data", exist_ok=True)
     combined.to_csv("data/stocks.csv", index=False)
     print("Saved to CSV!")
-
-    engine = create_engine("postgresql://postgres:postgres123@localhost:5432/stock_db")
-    combined.to_sql("stock_prices", engine, if_exists="replace", index=False)
-    print("Saved to PostgreSQL!")
-
     print(f"\nTotal rows: {len(combined)}")
     print(f"Total stocks: {combined['Stock'].nunique()}")
     return combined
