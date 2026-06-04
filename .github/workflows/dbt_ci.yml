@@ -1,0 +1,48 @@
+name: dbt CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  dbt-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install dbt-duckdb pandas yfinance
+
+      - name: Create dbt profiles
+        run: |
+          mkdir -p ~/.dbt
+          cat <<EOF > ~/.dbt/profiles.yml
+          stock_dbt:
+            target: dev
+            outputs:
+              dev:
+                type: duckdb
+                path: stock_market_duckdb.db
+          EOF
+
+      - name: Fetch stock data
+        run: python src/fetch_stock.py
+
+      - name: Migrate to DuckDB
+        run: python src/migrate_to_duckdb.py
+
+      - name: Run dbt models
+        run: dbt run --project-dir stock_dbt
+
+      - name: Run dbt tests
+        run: dbt test --project-dir stock_dbt --exclude my_first_dbt_model
