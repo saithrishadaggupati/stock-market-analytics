@@ -140,4 +140,3 @@ streamlit run dashboard/app.py
 Open stock_market_bi.pbix in Power BI Desktop for the Power BI report.
 Open Tableau workbook or visit the Tableau Public link above for the Tableau dashboard.
 
-Documentation update for GitHub achievement.
