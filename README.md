@@ -1,33 +1,7 @@
 # Stock Market Analytics — BI Dashboard
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-brightgreen)](https://stock-market-analytics-ftic57gndb94woiigwukue.streamlit.app/)
-[![Tableau](https://img.shields.io/badge/Tableau-Public-E97627?style=flat&logo=tableau&logoColor=white)](https://public.tableau.com/app/profile/saithrisha.daggupati/viz/StockMarketAnalytics_17805669868700/StockMarketAnalytics)
-
-
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-
-
-
-
-
-![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=flat&logo=duckdb&logoColor=black)
-
-
-
-
-
-![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat&logo=dbt&logoColor=white)
-
-
-
-
-
-![Power BI](https://img.shields.io/badge/PowerBI-F2C811?style=flat&logo=powerbi&logoColor=black)
-
-
-
-
+[![Tableau](https://img.shields.io/badge/Tableau-Public-E97627?style=flat&logo=tableau&logoColor=white)](https://public.tableau.com/app/profile/saithrisha.daggupati/viz/StockMarketAnalytics_17805669868700/StockMarketAnalytics)![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=flat&logo=duckdb&logoColor=black)![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat&logo=dbt&logoColor=white)![Power BI](https://img.shields.io/badge/PowerBI-F2C811?style=flat&logo=powerbi&logoColor=black)
 
 ![Dashboard Preview](dashboard_preview.png)
 
