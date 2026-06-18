@@ -1,14 +1,24 @@
 # Stock Market Analytics — BI Dashboard
 
 [
+
+
 ![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-brightgreen)
+
+
 ](https://stock-market-analytics-ftic57gndb94woiigwukue.streamlit.app/)
 [
+
+
 ![Tableau](https://img.shields.io/badge/Tableau-Public-E97627?style=flat&logo=tableau&logoColor=white)
+
+
 ](https://public.tableau.com/app/profile/saithrisha.daggupati/viz/StockMarketAnalytics_17805669868700/StockMarketAnalytics)
 
 
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+
 
 
 
@@ -18,7 +28,9 @@
 
 
 
+
 ![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat&logo=dbt&logoColor=white)
+
 
 
 
@@ -84,6 +96,19 @@ US Tech genuinely outperforms Indian IT — that difference holds up statistical
 
 ---
 
+## Portfolio optimisation
+
+I wanted to know if the data could actually be used to build a better portfolio, not just describe risk after the fact. So I ran a Markowitz mean-variance optimisation across all 25 stocks using scipy's SLSQP solver, comparing it against a naive equal-weighted baseline.
+
+| | Equal-weight | Optimised |
+|---|---|---|
+| Variance | 0.427850 | 0.267086 |
+| Sharpe ratio | 0.0017 | 0.0268 |
+
+The optimiser cut portfolio variance by 37.57% for the same expected return, pushing the Sharpe ratio up roughly 16x. The top holdings it converged on lean heavily into Indian banking and IT - HINDUNILVR.NS, HDFCBANK.NS, and ICICIBANK.NS take the largest weights, with BAC and TCS.NS rounding out the top five.
+
+---
+
 ## Dashboards
 
 **Streamlit** — live interactive dashboard with sector filters and stock deep-dive charts.
@@ -135,8 +160,8 @@ python src/migrate_to_duckdb.py
 python src/kpi_queries.py
 python src/statistics_analysis.py
 python src/ab_testing.py
+python src/markowitz.py
 streamlit run dashboard/app.py
 
 Open stock_market_bi.pbix in Power BI Desktop for the Power BI report.
 Open Tableau workbook or visit the Tableau Public link above for the Tableau dashboard.
-
