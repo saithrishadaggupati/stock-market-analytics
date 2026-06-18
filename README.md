@@ -1,7 +1,6 @@
 # Stock Market Analytics — BI Dashboard
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-brightgreen)]
-(https://stock-market-analytics-ftic57gndb94woiigwukue.streamlit.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-brightgreen)](https://stock-market-analytics-ftic57gndb94woiigwukue.streamlit.app/)
 [![Tableau](https://img.shields.io/badge/Tableau-Public-E97627?style=flat&logo=tableau&logoColor=white)](https://public.tableau.com/app/profile/saithrisha.daggupati/viz/StockMarketAnalytics_17805669868700/StockMarketAnalytics)
 
 
